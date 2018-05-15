@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/fl_seek_ll_seek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.blanink.view.MyViewPager
+                    android:id="@+id/framgment_task_vp_advertise"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center_horizontal"></com.blanink.view.MyViewPager>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:focusableInTouchMode="true"
+                        android:background="@color/transparent"
+                        android:paddingLeft="@dimen/padding_search_bar"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/et_seek"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="5dp"
+                            android:drawableLeft="@drawable/seek"
+                            android:text="  公司 产品 招标"
+                            android:background="@drawable/input_shade"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/gray_text"
+
+                            android:paddingLeft="5dp"
+                            android:singleLine="true"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/tv_scan"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_centerVertical="true"
+                            android:drawableRight="@drawable/scan_32"
+                            android:textSize="16dp" />
+                        <!--  android:visibility="invisible" -->
+
+                    </RelativeLayout>
+
+
+
+
+
+            </FrameLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_below="@id/fl_seek_ll_seek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+    </ScrollView>
+    <include layout="@layout/layout_load"></include>
+</RelativeLayout>

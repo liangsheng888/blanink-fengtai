@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackGround"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.activity.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="公司注册信息"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/last"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/text_color_red"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/next"/>
+    </RelativeLayout>
+
+    <LinearLayout
+       android:layout_width="match_parent"
+        android:background="@color/white"
+       android:layout_height="40dp">
+       <TextView
+           android:id="@+id/tv_company_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="16sp"
+           android:layout_marginLeft="10dp"
+           android:layout_gravity="center_vertical"
+           android:textColor="@color/black_text"
+           android:text="@string/companyName"/>
+       <EditText
+           android:id="@+id/et_company_name"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           style="@style/edit_text_style_liner"
+           android:singleLine="true"/>
+   </LinearLayout>
+    <include layout="@layout/layout_line"></include>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/tv_short_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black_text"
+            android:text="@string/shortName"/>
+        <EditText
+            android:id="@+id/et_short_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/edit_text_style_liner"
+            android:singleLine="true"/>
+    </LinearLayout>
+    <include layout="@layout/layout_line"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="@string/agencyNumber"
+
+            android:textColor="@color/black_text"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/edit_text_style_liner"
+            android:ems="18"
+            android:maxLength="18"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:singleLine="true" />
+    </LinearLayout>
+    <include layout="@layout/layout_line"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="@string/address"
+            android:textColor="@color/black_text"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/edit_text_style_liner"
+
+            android:singleLine="true" />
+    </LinearLayout>
+    <include layout="@layout/layout_line"></include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/tv_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/introduce"
+            android:textColor="@color/black_text"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_tv_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:paddingTop="10dp"
+            style="@style/edit_text_style_liner"
+            android:gravity="top"
+            android:singleLine="true" />
+    </LinearLayout>
+    <include layout="@layout/layout_line"></include>
+</LinearLayout>

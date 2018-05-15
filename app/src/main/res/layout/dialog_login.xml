@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="20dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorBackGround"
+        android:drawableLeft="@mipmap/ts"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="警告！你的账户在其它地方登录"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="10dp"
+        android:text="账号"
+        android:gravity="left"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+    <EditText
+        android:id="@+id/txt_username"
+        android:layout_height="40dp"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:autoText="false"
+
+        android:capitalize="none"
+        android:background="@drawable/corner__gray_black"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+    <TextView
+        android:id="@+id/password"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="密码"
+        android:gravity="left"
+        />
+    <EditText
+        android:id="@+id/txt_password"
+        android:layout_height="40dp"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:autoText="false"
+        android:capitalize="none"
+        android:inputType="textPassword"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:background="@drawable/corner__gray_black"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:layout_height="35dp"
+            android:background="@drawable/selector_corner_black"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/selector_blue"
+            android:gravity="center"
+            android:text="重新登录"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_modify_psd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorTheme">
+    <RelativeLayout
+        android:background="@color/colorBackGround"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/tender_manager"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorTheme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="修改密码"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/iv_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="返回"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/last" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_psd"
+            android:layout_below="@id/tender_manager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/layout_line"></include>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff">
+
+                <EditText
+                    android:id="@+id/et_newPsd"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:hint="请输入新密码"
+                    android:gravity="center"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorBlack"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:text="" />
+
+            </RelativeLayout>
+            <include layout="@layout/layout_line"></include>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff">
+
+                <EditText
+                    android:id="@+id/et_nick"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tv_nick"
+                    android:hint="请再次输入新密码"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorBlack"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:text="" />
+
+            </RelativeLayout>
+            <include layout="@layout/layout_line"></include>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_below="@id/ll_psd"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textColor="#fff"
+            android:text="确定"
+            android:layout_margin="15dp"
+            android:textSize="16sp"
+            android:background="@drawable/selector_red"/>
+    </RelativeLayout>
+</RelativeLayout>

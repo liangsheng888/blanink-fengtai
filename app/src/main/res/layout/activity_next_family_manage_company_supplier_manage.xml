@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_next_family_manage_company_supplier_manage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackGround"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.activity.lastnext.NextFamilyManageCompanySupplierManage">
+
+    <RelativeLayout
+        android:id="@+id/rl_customer_manage"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的供应商"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/iv_customer_manage_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="#fff"
+            android:text="返回"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/last"  />
+
+        <ImageView
+            android:id="@+id/iv_seek_supplier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/add_white" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_below="@id/rl_customer_manage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.blanink.view.RefreshListView
+            android:id="@+id/lv_supplier_queue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            >
+
+        </com.blanink.view.RefreshListView>
+        <RelativeLayout
+            android:id="@+id/rl_not_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_not"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableTop="@drawable/data_not"
+                android:padding="10dp"
+                android:gravity="center"
+                android:text="没有供应商" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_load"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.blanink.view.CusProgressView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.blanink.view.CusProgressView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_load_fail"
+                android:layout_below="@id/ll_load"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/loading_error_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/wb_request_loading_error" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/loading_error_img"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="加载失败，请点击屏幕重试"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+
+    <declare-styleable name="RatingBar">
+        <!--尺寸值-->
+        <attr name="starImageSize" format="dimension" />
+        <!--星星间距-->
+        <attr name="starPadding" format="dimension" />
+        <!--星星总数-->
+        <attr name="starCount" format="integer" />
+        <!--空白的星星资源文件值-->
+        <attr name="starEmpty" format="reference" />
+        <!--满星资源文件值-->
+        <attr name="starFill" format="reference" />
+        <!--半星资源文件值-->
+        <attr name="starHalf" format="reference" />
+        <!--是否可点击boolean值-->
+        <attr name="clickable" format="boolean" />
+        <!--当前进度float值-->
+        <attr name="starStep" format="float" />
+        <!--每次进度方式的值，整星还是半星-->
+        <attr name="stepSize">
+            <enum name="Half" value="0" />
+            <enum name="Full" value="1" />
+        </attr>
+    </declare-styleable>
+
+        <declare-styleable name="RoundProgressBar">
+            <attr name="roundColor" format="color"/>
+            <attr name="roundProgressColor" format="color"/>
+            <attr name="roundWidth" format="dimension"></attr>
+            <attr name="roundTextColor" format="color" />
+            <attr name="roundTextSize" format="dimension" />
+            <attr name="max" format="integer"></attr>
+            <attr name="textIsDisplayable" format="boolean"></attr>
+            <attr name="style">
+                <enum name="STROKE" value="0"></enum>
+                <enum name="FILL" value="1"></enum>
+            </attr>
+        </declare-styleable>
+
+    <declare-styleable name="LoadingTextView">
+        <attr name="textStyle">
+            <enum name="noText" value="-1" />
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="gravity" format="integer" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textPadding" format="dimension" />
+        <attr name="android:text" />
+    </declare-styleable>
+    <declare-styleable name="TitleBar">
+        <attr name="textColor" />
+        <attr name="background" format="reference" />
+        <attr name="backButton" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="PullToRefresh">
+        <attr name="ptrRefreshableViewBackground" format="reference|color"/>
+        <attr name="ptrOverScroll" format="reference|boolean"/>
+        <attr name="ptrScrollingWhileRefreshingEnabled" format="reference|boolean"/>
+        <attr name="ptrListViewExtrasEnabled" format="reference|boolean"/>
+    </declare-styleable>
+    <declare-styleable name="GroupLayout">
+        <attr name="dividerPadding" format="dimension" />
+        <attr name="dividerHeight" format="dimension" />
+        <attr name="dividerColor" format="color" />
+        <attr name="itemSelector" format="reference" />
+    </declare-styleable>
+    <!-- 申请进度的自定义view-->
+    <declare-styleable name="AuditProgressView">
+        <!--当前步骤是否完成 -->
+        <attr name="apv_isCurrentComplete" format="boolean" />
+        <!--下一个步骤是否完成 -->
+        <attr name="apv_isNextComplete" format="boolean" />
+        <!--是不是第一个步骤 -->
+        <attr name="apv_isFirstStep" format="boolean" />
+        <!--是不是最后一个步骤 -->
+        <attr name="apv_isLastStep" format="boolean" />
+        <!--共有几个步骤 -->
+        <attr name="apv_stepCount" format="integer" />
+        <!--步骤提示 -->
+        <attr name="apv_text" format="string|reference" />
+    </declare-styleable>
+    <declare-styleable name="ContactItemView">
+        <attr name="contactItemImage" format="reference"/>
+        <attr name="contactItemName" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="MySwitchButton">
+        <attr name="mySwitchOpenImage" format="reference"/>
+        <attr name="mySwitchCloseImage" format="reference"/>
+        <attr name="mySwitchStatus">
+            <enum name="open" value="0"/>
+            <enum name="close" value="1"/>
+        </attr>
+    </declare-styleable>
+
+</resources>

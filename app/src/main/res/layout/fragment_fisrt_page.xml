@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+    android:id="@+id/framgent_task_rl_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:layout_alignParentTop="true"
+    android:paddingTop="5dp"
+    android:paddingBottom="15dp"
+    android:background="#fff"
+    android:orientation="horizontal">
+
+    <TextView
+    android:id="@+id/tv_fr_tender"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:drawableTop="@drawable/zb"
+    android:gravity="center_horizontal"
+    android:text="招标" />
+
+    <TextView
+    android:id="@+id/tv_fr_bid"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:drawableTop="@drawable/tb"
+    android:gravity="center_horizontal"
+    android:text="投标" />
+    <TextView
+    android:id="@+id/tv_last_manage"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center_horizontal"
+    android:drawableTop="@drawable/hzgl"
+    android:text="上家管理" />
+
+    <TextView
+    android:id="@+id/tv_next_manage"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:drawableTop="@drawable/hzgl"
+    android:gravity="center_horizontal"
+    android:text="下家管理" />
+
+    </LinearLayout>
+
+</LinearLayout>

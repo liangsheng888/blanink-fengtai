@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:useLevel="false">
+    <!-- 背景填充颜色值 -->
+    <solid android:color="@color/colorOrange" />
+    <!-- radius值越大，越趋于圆形 -->
+    <corners android:radius="10dip" />
+    <!-- 圆角图像内部填充四周的大小 ，将会以此挤压内部布置的view -->
+</shape>

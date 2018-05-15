@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTheme"
+        android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+        tools:context=".ui.activity.my.MyProfile">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackGround">
+
+        <RelativeLayout
+            android:id="@+id/tender_manager"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+            android:background="@color/colorTheme">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="修改个人资料"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/iv_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/last"
+                android:gravity="center_vertical"
+                android:text="返回"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="头像"
+                android:textSize="16sp"
+                android:textColor="@color/black_text"/>
+
+            <ImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <include layout="@layout/layout_line"></include>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:focusableInTouchMode="true"
+            android:paddingLeft="10dp"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/tv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="昵称:"
+                android:textSize="16sp"
+                android:textColor="@color/black_text" />
+
+            <EditText
+                android:id="@+id/et_nick"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_nick"
+                android:textSize="16sp"
+                android:gravity="right|center_vertical"
+                android:textColor="#736f6f"
+                android:background="@color/white"
+                android:layout_marginRight="20dp"
+                android:text="sssss" />
+
+        </RelativeLayout>
+    <include layout="@layout/layout_line"></include>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:focusableInTouchMode="true"
+            android:paddingLeft="10dp"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="手机:"
+                android:textSize="16sp"
+                android:textColor="@color/black_text" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:gravity="right|center_vertical"
+                android:textColor="#736f6f"
+                android:layout_toRightOf="@id/tv_phone"
+                android:layout_marginRight="20dp"
+                android:background="@color/white"
+                android:text="1111111" />
+
+        </RelativeLayout>
+    <include layout="@layout/layout_line"></include>
+
+    <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/selector_red"
+            android:text="保存"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    </LinearLayout>

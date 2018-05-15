@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackGround"
+    tools:context=".ui.activity.order.GoOrderAddProduct">
+
+    <RelativeLayout
+        android:id="@+id/go_order_new_add_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新增采购"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/iv_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/last"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/go_order_new_add_rl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/go_order_add_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:id="@+id/go_order_add_rl_supplier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:background="#fff">
+
+                    <TextView
+                        android:id="@+id/tv_supplier"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:text="供应商"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_supplier"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white">
+
+                        <Spinner
+                            android:id="@+id/sp_supplier"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/white"></Spinner>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <include layout="@layout/layout_line"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:orientation="vertical"
+                    android:background="#fff">
+
+                    <TextView
+                        android:id="@+id/tv_product_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="产品规格"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_product_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white">
+
+                        <EditText
+                            android:id="@+id/et_product_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray"
+                            android:textSize="16sp">
+
+                        </EditText>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <include layout="@layout/layout_line"></include>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:background="#fff">
+
+                    <TextView
+                        android:id="@+id/tv_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="产品种类"
+                        android:paddingLeft="5dp"
+
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white">
+
+                        <Spinner
+                            android:id="@+id/sp_product_category"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/white">
+
+                        </Spinner>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <include layout="@layout/layout_line"></include>
+
+                <com.blanink.view.NoScrollListview
+                    android:id="@+id/lv_product_attribute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:divider="@null"
+                    android:footerDividersEnabled="false"></com.blanink.view.NoScrollListview>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:orientation="vertical"
+                    android:background="#fff">
+
+                    <TextView
+                        android:id="@+id/tv_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="数量"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_toRightOf="@id/tv_num"
+                        android:layout_weight="2"
+                        android:background="@color/colorBackGround">
+
+                        <EditText
+                            android:id="@+id/et_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@color/white"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray"
+                            android:textSize="16sp">
+
+                        </EditText>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <include layout="@layout/layout_line"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:orientation="vertical"
+                    android:background="#fff">
+
+                    <TextView
+                        android:id="@+id/tv_prioirty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="优先级"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_prioirty"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white">
+
+                        <Spinner
+                            android:id="@+id/sp_priority"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/white">
+
+                        </Spinner>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <include layout="@layout/layout_line"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:background="#fff">
+
+                    <TextView
+                        android:id="@+id/tv_price2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="单价"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white">
+
+                        <EditText
+                            android:id="@+id/et_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@null"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray"
+                            android:textSize="16sp">
+
+                        </EditText>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <include layout="@layout/layout_line"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="#fff">
+
+                    <TextView
+                        android:id="@+id/hand_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="交货日期"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_hand_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/colorBackGround">
+
+                        <TextView
+                            android:id="@+id/tv_hand_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray"
+                            android:textSize="16sp">
+
+                        </TextView>
+
+                    </RelativeLayout>
+                </LinearLayout>
+                <include layout="@layout/layout_line"></include>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/go_order_add_ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/go_order_add_ll"
+                android:orientation="vertical">
+
+                <com.blanink.view.NoScrollListview
+                    android:id="@+id/lv_major"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.blanink.view.NoScrollListview>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:orientation="vertical"
+                    android:background="#fff"
+                   >
+
+                    <TextView
+                        android:id="@+id/tv_note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="备注信息"
+                        android:visibility="gone"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorBackGround">
+
+                        <EditText
+                            android:id="@+id/et_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="#fff"
+                            android:gravity="top"
+                            android:hint="请输入备注信息..."
+                            android:minLines="5"
+                            android:textColor="@color/colorGray"
+                            android:textSize="16sp">
+
+                        </EditText>
+
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="15dp">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:background="#fff" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/go_order_add_ll2">
+
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_red"
+                    android:text="添加"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

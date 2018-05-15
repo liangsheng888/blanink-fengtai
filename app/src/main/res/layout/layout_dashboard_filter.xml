@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black_text"
+            android:textSize="16sp"
+            android:text="客户:"/>
+        <TextView
+            android:id="@+id/tv_companyName"
+            android:layout_toRightOf="@id/company"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:gravity="right|center_vertical"
+            android:text="客户筛选"
+            android:textSize="16sp"
+            android:drawableRight="@drawable/right_32"
+            android:layout_height="wrap_content" />
+      <!--  <Spinner
+            android:layout_toRightOf="@id/company"
+            android:id="@+id/sp_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:layout_centerVertical="true"
+            ></Spinner>-->
+    </RelativeLayout>
+    <include layout="@layout/layout_line_gray"></include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/tv_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已完成:"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+
+            android:layout_centerVertical="true"
+            android:textColor="@color/black_text"/>
+        <com.blanink.view.MySwitchButton
+            android:id="@+id/esb_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"
+            app:mySwitchStatus="close" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <include layout="@layout/layout_line_gray"></include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="规格名称:"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+
+            android:layout_centerVertical="true"
+            android:textColor="@color/black_text"/>
+        <EditText
+            android:id="@+id/et_product_name"
+            android:layout_toRightOf="@id/tv"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingRight="22dp"
+            android:paddingLeft="5dp"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:background="@null"/>
+    </RelativeLayout>
+
+    <include layout="@layout/layout_line_gray"></include>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/tv_seek"
+            android:background="@drawable/selector_corner_gray"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:text="搜索"/>
+    </RelativeLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"></View>
+</LinearLayout>

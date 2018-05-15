@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackGround"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <RelativeLayout
+        android:id="@+id/rl_customer_manage"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorTheme">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="客户模糊匹配"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/iv_customer_matches_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/last"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_seek"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/rl_customer_manage"
+        android:layout_margin="10dp"
+        android:background="@drawable/input_shade"
+
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/come_order_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/seek" />
+
+        <EditText
+            android:id="@+id/et_seek_content"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_toRightOf="@id/come_order_tv"
+            android:background="@null"
+            android:hint="请输入你要添加的客户名称"
+            android:singleLine="true"
+            android:textColor="@color/colorGray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_seek"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/colorTheme"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_not_customer_queue"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_red"
+        android:text="该公司不在列表中"
+        android:textColor="#fff"
+        android:visibility="invisible" />
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_not_customer_queue"
+        android:layout_below="@+id/rl_seek">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ListView
+                android:id="@+id/lv_matches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:listSelector="#66fdc39f"></ListView>
+        </LinearLayout>
+
+        <include layout="@layout/layout_load_gone"></include>
+    </FrameLayout>
+</RelativeLayout>

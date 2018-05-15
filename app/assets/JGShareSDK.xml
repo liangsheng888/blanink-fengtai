@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+
+    <!-- 如果不需要支持某平台，可缺省该平台的配置-->
+    <!-- 各个平台的KEY仅供DEMO演示，开发者要集成发布需要改成自己的KEY-->
+
+    <SinaWeibo
+        AppKey="377076020"
+        AppSecret="a0047bb649e9e2e0cbcbb2cc499ded80"
+        RedirectUrl="http://www.blanink.com"/>
+
+    <QQ
+        AppId="1106011004"
+        AppKey="YIbPvONmBQBZUGaN"/>
+
+    <Wechat
+        AppId="wx3ce0445736360261"
+        AppSecret="92ceaee5c84811650cda7dbdeec45aa0"/>
+</DevInfor>

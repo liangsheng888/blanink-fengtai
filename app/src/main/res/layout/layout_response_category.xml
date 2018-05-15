@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ll_header"
+    android:background="@color/white">
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="35dp">
+<!--       <RelativeLayout
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_marginLeft="5dp"
+           android:layout_weight="1">
+      <Spinner
+          android:id="@+id/sp_company_name"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:background="@drawable/corner__gray_black"></Spinner>
+       </RelativeLayout>
+      <RelativeLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dp"
+          android:layout_weight="1">
+          <EditText
+              android:id="@+id/et_product_name"
+              android:hint="规格名称"
+              android:textSize="16sp"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:textColor="@color/gray_text"
+              android:singleLine="true"
+              android:background="@drawable/corner__gray_black"/>
+      </RelativeLayout>
+      <RelativeLayout
+
+          android:layout_width="0dp"
+          android:layout_weight="0.5"
+          android:layout_height="match_parent">
+          <TextView
+              android:id="@+id/tv_seek"
+              android:background="@drawable/corner__gray_black"
+              android:layout_width="60dp"
+              android:layout_height="30dp"
+              android:layout_centerInParent="true"
+              android:textSize="16sp"
+              android:gravity="center"
+              android:textColor="@color/black"
+              android:text="搜索"/>
+      </RelativeLayout>-->
+       <TextView
+           android:id="@+id/tv_seek"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="筛选"
+           android:textColor="@color/black_text"
+           android:layout_centerInParent="true"
+           android:drawableRight="@drawable/last_gray"
+           android:textSize="16sp"
+           android:gravity="center" />
+  </RelativeLayout>
+    <include layout="@layout/layout_line_gray"></include>
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_after_sale_queue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/sys_title_background_color"
+    tools:context=".ui.activity.afterSale.AfterSaleQueue">
+    <RelativeLayout
+        android:background="@color/colorBackGround"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_after_sale_queue"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="售后列表"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/after_sale_queue_iv_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:text="返回"
+            android:gravity="center"
+            android:drawableLeft="@drawable/last" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/rl"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_below="@id/rl_after_sale_queue">
+       <RadioGroup
+           android:id="@+id/rg_after_sale"
+           android:layout_width="match_parent"
+           android:layout_height="35dp"
+           android:background="@color/colorWhite"
+           android:orientation="horizontal">
+           <RadioButton
+               android:id="@+id/rb_not_handle"
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:button="@null"
+               android:checked="true"
+               android:gravity="center"
+               android:textSize="16sp"
+               android:textColor="@color/text_color_selector"
+               android:text="待处理"/>
+           <RadioButton
+               android:id="@+id/rb_handle_finished"
+               android:layout_width="0dp"
+               android:layout_height="match_parent"
+               android:layout_weight="1"
+               android:button="@null"
+               android:textColor="@color/text_color_selector"
+               android:gravity="center"
+               android:textSize="16sp"
+               android:text="已处理"
+               />
+       </RadioGroup>
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@color/white"
+            android:orientation="horizontal"></LinearLayout>
+    </LinearLayout>
+   <android.support.v4.view.ViewPager
+       android:id="@+id/viewPager"
+       android:layout_below="@id/rl"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+</RelativeLayout>
+</RelativeLayout>

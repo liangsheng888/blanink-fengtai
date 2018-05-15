@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_person_set"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.set.PersonSet">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/tender_manager"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:background="@color/colorTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="设置"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/iv_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="返回"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/last" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@id/tender_manager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/rl_safe"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_gray_pressed"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/tv_safe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="修改密码"
+                android:drawablePadding="10dp"
+                android:textColor="@color/colorBlack"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/sec"/>
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+
+                android:src="@drawable/right_32"/>
+        </RelativeLayout>
+      <include layout="@layout/layout_line"></include>
+        <RelativeLayout
+            android:id="@+id/rl_exit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_gray_pressed"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/tv_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="切换账号"
+                android:drawablePadding="10dp"
+                android:textColor="@color/colorBlack"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/set_exit"/>
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_32"/>
+        </RelativeLayout>
+
+        <include layout="@layout/layout_line"></include>
+
+    </LinearLayout>
+
+</RelativeLayout>
+</RelativeLayout>
